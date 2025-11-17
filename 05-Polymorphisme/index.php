@@ -38,9 +38,9 @@ class Batterie extends Instrument
     }
 }
 $orchestre = [
-    new Guitare("Ma Guitare"),
-    new Piano("Mon Piano"),
-    new Batterie("Ma Batterie")
+    new Guitare("fender"),
+    new Piano("yamaha"),
+    new Batterie("pearl")
 ];
 
 foreach ($orchestre as $instrument) {
