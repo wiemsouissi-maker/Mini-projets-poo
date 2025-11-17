@@ -28,3 +28,8 @@ class comptebancaire
 // Création des comptes
 $jean = new comptebancaire("Jean", 1000);
 $marie = new comptebancaire("Marie", 500);
+
+$jean->deposer(200);
+$jean->afficherSolde();
+$marie->deposer(200);
+$marie->afficherSolde();

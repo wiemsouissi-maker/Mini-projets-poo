@@ -27,7 +27,7 @@
     // Dans la classe Voiture, ajoute :
     //
     // 1. Une méthode demarrer() qui affiche :
-    //    "🚗 Vrooooom ! La [marque] démarre !"
+    //   🚗 Vrooooom ! La  "[marque] démarre !"
     //
     // 2. Une méthode klaxonner() qui affiche :
     //    "🎺 POUET POUET ! ([couleur])"

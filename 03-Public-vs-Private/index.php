@@ -18,7 +18,7 @@ class portefeuille
     {
         $this->proprietaire = $proprietaire;
         $this->argentDisponible = $argentInitial;
-        echo " Portefeuille créé pour {$this->proprietaire} avec {$this->argentDisponible}€\n";
+        echo " Portefeuille créé pour {$this->proprietaire} avec {$this->argentDisponible}€<br>";
     }
 
     public function getArgent()
@@ -30,9 +30,9 @@ class portefeuille
     {
         if ($montant > 0) {
             $this->argentDisponible += $montant;
-            echo "Ajout de {$montant}€\n";
+            echo "Ajout de {$montant}€<br>";
         } else {
-            echo " Montant invalide !\n";
+            echo "❌ Montant invalide !<br>";
         }
     }
 
@@ -40,19 +40,18 @@ class portefeuille
     {
         if ($montant > 0 && $montant <= $this->argentDisponible) {
             $this->argentDisponible -= $montant;
-            echo " Retrait de {$montant}€\n";
+            echo " ✅Retrait de {$montant}€<br>";
         } else {
-            echo " Montant invalide ou insuffisant !\n";
+            echo "❌Montant invalide ou insuffisant !<br>";
         }
     }
 }
 
-echo "\n========= TESTS DU PORTEFEUILLE =========\n";
-$monPortefeuille = new portefeuille("Alice", 100);
-echo "Argent disponible : " . $monPortefeuille->getArgent() . "€\n";
+$monPortefeuille = new portefeuille("wiem", 100);
+echo "Argent disponible : " . $monPortefeuille->getArgent() . "€<br>";
 $monPortefeuille->ajouterArgent(50);
-echo "Argent disponible : " . $monPortefeuille->getArgent() . "€\n";
+echo "Argent disponible : " . $monPortefeuille->getArgent() . "€<br>";
 $monPortefeuille->retirerArgent(30);
-echo "Argent disponible : " . $monPortefeuille->getArgent() . "€\n";
-$monPortefeuille->retirerArgent(150); // Test retrait invalide
-echo "Argent disponible : " . $monPortefeuille->getArgent() . "€\n";
+echo "Argent disponible : " . $monPortefeuille->getArgent() . "€<br>";
+$monPortefeuille->retirerArgent(150);
+echo "Argent disponible : " . $monPortefeuille->getArgent() . "€<br>";

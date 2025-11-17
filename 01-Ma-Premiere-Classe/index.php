@@ -8,38 +8,37 @@
 class Voiture
 {
     public $marque;
-    public $modele;
-    public $vitesse = 0;
+    public $couleur;
+    public $vitesse;
 
-    public function afficherInfos()
+    public function demarrer()
     {
-        echo "Infos: {$this->marque} {$this->modele}, Vitesse: {$this->vitesse} km/h\n<br>";
+        echo "<br> vroom ! la $this->marque démarre ! la vitesse max est de $this->vitesse <br>";
     }
 
-    public function accelerer($vitesse)
+    public function klaxonner()
+
     {
-        $this->vitesse += $vitesse;
-        echo "Accélération à {$this->vitesse} km/h\n<br>";
+
+        echo "<br> Pouet Pouet ! la voiture $this->couleur <br>";
     }
 }
-echo "==1. Création des Voitures ==\n<br>";
+echo " Création des Voitures \n<br>";
 
-// Voiture 1 : $peugeot
-$peugeot = new Voiture();
-$peugeot->marque = "Peugeot";
-$peugeot->modele = "208";
+// Voiture 1 : $ferrari
+$ferrari = new Voiture();
+$ferrari->marque = "ferrari";
+$ferrari->couleur  = "rouge";
+$ferrari->vitesse = 320;
 
-// Voiture 2 : $tesla
-$tesla = new Voiture();
-$tesla->marque = "Tesla";
-$tesla->modele = "Model S";
+// Voiture 2 : twingo
+$twingo = new Voiture();
+$twingo->marque = "ferrari";
+$twingo->couleur  = "jaune";
+$twingo->vitesse = 150;
 
-$peugeot->afficherInfos();
-$tesla->afficherInfos();
-echo "\n=. Test de la Peugeot ==\n<br>";
-$peugeot->accelerer(50);
-$peugeot->afficherInfos();
 
-echo "\n= 3. Test de la Tesla ==\n<br>";
-$tesla->accelerer(100);
-$tesla->afficherInfos();
+$ferrari->demarrer();
+$twingo->demarrer();
+$ferrari->klaxonner();
+$twingo->klaxonner();
