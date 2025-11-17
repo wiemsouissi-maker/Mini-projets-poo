@@ -13,7 +13,7 @@ class comptebancaire
     {
         $this->titulaire = $titulaire;
         $this->solde = $soldeInitial;
-        echo "Compte créé pour {$this->titulaire} avec {$this->solde}€\n";
+        echo "Compte créé pour {$this->titulaire} avec {$this->solde}€\n<br>";
     }
     public function deposer($montant)
     {
@@ -22,15 +22,9 @@ class comptebancaire
     }
     public function afficherSolde()
     {
-        echo " Solde de {$this->titulaire} : {$this->solde}€\n";
+        echo " Solde de {$this->titulaire} : {$this->solde}€\n<br>";
     }
 }
 // Création des comptes
 $jean = new comptebancaire("Jean", 1000);
 $marie = new comptebancaire("Marie", 500);
-// Dépôts
-$jean->deposer(200);
-$marie->deposer(200);
-// Affichage des soldes
-$jean->afficherSolde();
-$marie->afficherSolde();
